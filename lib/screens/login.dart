@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'SegundaTela.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -38,7 +39,10 @@ class _LoginState extends State<Login> {
             ),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SegundaTela()));
+              },
               child: Text('Entrar'),
             ),
             SizedBox(height: 20),
