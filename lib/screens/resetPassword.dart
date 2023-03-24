@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/screens/login.dart';
+import 'package:tccerto/screens/login.dart';
 import '../widgets/primary_button.dart';
 import '../widgets/reset_form.dart';
 
