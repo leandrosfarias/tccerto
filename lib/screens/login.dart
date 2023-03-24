@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:tccerto/screens/home.dart';
+import 'package:tccerto/widgets/todoList.dart';
 import 'SegundaTela.dart';
+import 'signup.dart';
+import 'resetPassword.dart';
+import '../widgets/reset_form.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -15,46 +20,65 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'),
+        title: const Text('Login'),
       ),
       body: Container(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.person, size: 80),
-            SizedBox(height: 20),
-            TextField(
+            const Icon(Icons.person, size: 80),
+            const SizedBox(height: 20),
+            const TextField(
               decoration: InputDecoration(
                 hintText: 'Email',
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20.0,
             ),
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                 hintText: 'Senha',
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SegundaTela()));
+                    MaterialPageRoute(builder: (context) => Home()));
               },
-              child: Text('Entrar'),
+              child: const Text('Entrar'),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextButton(
-                  onPressed: () {},
-                  child: Text('Esqueci a senha'),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ResetPasswordScreen()));
+                  },
+                  child: const Text('Esqueci a senha'),
                 ),
               ],
-            )
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SignUpScreen()));
+                  },
+                  child: const Text('Criar conta'),
+                ),
+              ],
+            ),
           ],
         ),
       ),

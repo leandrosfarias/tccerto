@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:tccerto/widgets/horizontalDaysList.dart';
 
 // Map<DateTime, List<Event>> _events = {};
 DateTime _selectedDay = DateTime.now();
@@ -49,9 +50,7 @@ class SegundaTela extends StatelessWidget {
       appBar: AppBar(
         title: Text('Segunda Tela'),
       ),
-      body: Row(
-        children: [Text('$dia_mes')],
-      ),
+      body: HorizontalDaysList(),
     );
   }
 }

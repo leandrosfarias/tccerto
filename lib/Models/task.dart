@@ -1,19 +1,19 @@
 class Task {
-  String name;
+  String title;
   DateTime deadline;
-  bool isCompleted;
+  bool done;
 
-  Task({required this.name, required this.deadline, this.isCompleted = false});
+  Task({required this.title, required this.deadline, this.done = false});
 
   factory Task.fromJson(Map<String, dynamic> json) => Task(
-        name: json['name'],
+        title: json['title'],
         deadline: DateTime.parse(json['deadline']),
-        isCompleted: json['isCompleted'] ?? false,
+        done: json['done'] ?? false,
       );
 
   Map<String, dynamic> toJson() => {
-        'name': name,
+        'title': title,
         'deadline': deadline.toIso8601String(),
-        'isCompleted': isCompleted,
+        'done': done,
       };
 }
