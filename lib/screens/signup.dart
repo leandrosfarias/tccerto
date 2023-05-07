@@ -28,7 +28,7 @@ class SignUpScreen extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 30),
               child: Text(
-                'Criar uma conta',
+                'Registrar',
                 style: TextStyle(
                     color: Colors.red,
                     fontSize: 32,
@@ -62,7 +62,7 @@ class SignUpScreen extends StatelessWidget {
                     child: const Text(
                       'Login',
                       style: TextStyle(
-                        color: Colors.red,
+                        color: Colors.blue,
                         fontSize: 18,
                         fontWeight: FontWeight.w700,
                         decoration: TextDecoration.underline,
@@ -83,13 +83,13 @@ class SignUpScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30),
-              child: CheckBox(
-                text: 'Concordo com os',
-                link: 'termos e condições',
-              ),
-            ),
+            // const Padding(
+            //   padding: EdgeInsets.symmetric(horizontal: 30),
+            //   child: CheckBox(
+            //     text: 'Concordo com os',
+            //     link: 'termos e condições',
+            //   ),
+            // ),
             const SizedBox(
               height: 20,
             ),

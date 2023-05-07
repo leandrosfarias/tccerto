@@ -16,25 +16,43 @@ class TodoList extends StatefulWidget {
 class _TodoListState extends State<TodoList> {
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: widget.items.length,
-        itemBuilder: (context, index) {
-          final item = widget.items[index];
-          return Dismissible(
-              key: Key(item.title),
-              background: Container(
-                color: Colors.red.withOpacity(0.2),
-                child: const Text('data'),
-              ),
-              child: CheckboxListTile(
-                title: Text(item.title),
-                value: item.done,
-                onChanged: (value) {
-                  setState(() {
-                    item.done = value!;
-                  });
-                },
-              ));
-        });
+    return SizedBox(
+      width: 200,
+      child: ListView.builder(
+          padding: EdgeInsets.all(16.0),
+          itemCount: widget.items.length,
+          itemBuilder: (context, index) {
+            final item = widget.items[index];
+            return Dismissible(
+                key: Key(item.title),
+                background: Container(
+                  color: Colors.red.withOpacity(0.2),
+                  child: const Text('data'),
+                ),
+                child: Container(
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width * 0.5,
+                  // define a largura como metade da largura do dispositivo
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                        color: Colors.green,
+                        width: 1,
+                      )),
+                  child: CheckboxListTile(
+                    tileColor: Colors.white,
+                    title: Text(item.title),
+                    value: item.done,
+                    onChanged: (value) {
+                      setState(() {
+                        item.done = value!;
+                      });
+                    },
+                  ),
+                ));
+          }),
+    );
   }
 }

@@ -24,7 +24,7 @@ class ResetPasswordScreen extends StatelessWidget {
               height: 50,
             ),
             const Text(
-              'Redefinir senha',
+              'Recuperar senha',
               style: TextStyle(
                   color: Colors.red, fontSize: 32, fontWeight: FontWeight.w700),
             ),
@@ -32,7 +32,7 @@ class ResetPasswordScreen extends StatelessWidget {
               height: 5,
             ),
             const Text(
-              'Por favor, informe o seu endereço de e-mail',
+              'Insira o seu endereço de e-mail',
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 18,
